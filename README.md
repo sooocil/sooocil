@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://i.pinimg.com/736x/05/39/39/053939cf888df3321df13199638e4aeb.jpg" />
+  <img alt="Sushil Regmi" src="https://i.pinimg.com/736x/05/39/39/053939cf888df3321df13199638e4aeb.jpg" />
+</picture>
+
 # 💫 Hello I am Sushil:
 🔭 I’m currently working on my webpage<br>🌱 Studying Bachelor in Computer Application in CCT<br>💬 Ask me about nothing<br>👨‍💻Working as web developer since 2021
 
