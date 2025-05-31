@@ -1,5 +1,4 @@
 <div align="center">
-  <h1>Sushil</h1>
   <img src="https://i.pinimg.com/736x/05/39/39/053939cf888df3321df13199638e4aeb.jpg" alt="HeHe.." style="width:100%;height:auto;border-radius:10px;"/>
 </div>
 
