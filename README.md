@@ -7,10 +7,11 @@
 - 🌱 Studying **Bachelor in Computer Application** at CCT
 - 💻 Web developer since 2021
 
-<!-- ### 💡 Featured Projects
-- **[Portfolio Website](https://soocil.tech/)**: Built with Next.js, Tailwind CSS, and shadcn/ui.
-- **[Tauri App]**: A cross-platform desktop app using Tauri and JavaScript.
-- **[Curex]**: A project leveraging [insert tech, e.g., React/Node.js] for [brief description, e.g., health tracking]. -->
+### 💡 Featured Projects
+- **[Lumo](https://github.com/sooocil/Lumo)** – Screen dimming tool with customizable interface.
+- **[Curex](https://github.com/sooocil/Curex)** – Smart healthcare system for symptom analysis and doctor consults.
+- **[Vendora](https://github.com/sooocil/Vendora)** – No-code e-commerce builder with drag-and-drop editor.
+- **[Baas](https://github.com/sooocil/Baas)** – Hotel room booking platform for fast, easy reservations.
 
 ### 🌐 Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushil-regmi-441965209/) 
