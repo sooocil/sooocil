@@ -2,26 +2,29 @@ name: Update Time in README
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Runs every 5 minutes
-  workflow_dispatch: # Allows manual trigger
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
 
 jobs:
   update-time:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Get current time
-        uses: gerred/actions/current-time@master
+        uses: jonstacks/get-current-time@v1
         id: current-time
         with:
-          format: 'hh:mm:ss A dddd DD MMMM YYYY' # Custom format for "09:54:34 PM Thursday 19 June 2025"
+          format: 'hh:mm:ss A dddd DD MMMM YYYY'
+          timezone: 'Asia/Kathmandu'
 
       - name: Update README with current time
         run: |
-          TIME="${{ steps.current-time.outputs.time }}"
-          sed -i "s|<!-- TIME -->|<!-- TIME -->\n<time datetime=\"$(date -u '+%Y-%m-%dT%H:%M:%SZ')\">$TIME</time>|" README.md
+          TIME="${{ steps.current-time.outputs.formattedTime }}"
+          DATETIME="${{ steps.current-time.outputs.time }}"
+          sed -i "s|<!-- TIME -->|<!-- TIME -->\n<time datetime=\"$DATETIME\">$TIME</time>|" README.md
 
       - name: Commit and push changes
         run: |
