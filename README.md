@@ -1,5 +1,11 @@
 <div align="center">
-  <img src="./simpson.jpg" alt="HeHe.." style="width:100%;height:auto;border-radius:10px;"/>
+  <a href="https://soocil.tech" target="_blank">
+    <img src="./sushil.gif" alt="HeHe.." style="width:100%;height:auto;border-radius:10px;"/>
+  </a>
+</div>
+
+<div align="center">
+  <!-- TIME -->
 </div>
 
 ### 👨‍💻 About Me
