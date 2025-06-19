@@ -2,19 +2,19 @@ name: Update Time in README
 
 on:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'       # GitHub only allows minimum 5 min interval :contentReference[oaicite:1]{index=1}
   workflow_dispatch:
 
 jobs:
   update-time:
     permissions:
-      contents: write
+      contents: write           # ensures GITHUB_TOKEN can push
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Get current time
-        uses: jonstacks/get-current-time@v1
+        uses: josStorer/get-current-time@v2
         id: current-time
         with:
           format: 'hh:mm:ss A dddd DD MMMM YYYY'
@@ -32,6 +32,7 @@ jobs:
           git config --global user.email "action@github.com"
           git add README.md
           git commit -m "Update time to $TIME" || echo "No changes to commit"
-          git push
+          git pull --rebase origin main   # sync to avoid fast-forward issues :contentReference[oaicite:2]{index=2}
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
