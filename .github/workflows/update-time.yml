@@ -2,13 +2,13 @@ name: Update Time in README
 
 on:
   schedule:
-    - cron: '*/5 * * * *'       # GitHub only allows minimum 5 min interval :contentReference[oaicite:1]{index=1}
+    - cron: '*/5 * * * *'      
   workflow_dispatch:
 
 jobs:
   update-time:
     permissions:
-      contents: write           # ensures GITHUB_TOKEN can push
+      contents: write           
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
