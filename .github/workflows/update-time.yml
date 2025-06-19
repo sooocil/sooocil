@@ -42,7 +42,7 @@ jobs:
           git checkout main
           git rebase origin/main
           git stash pop
-          git add README.md
+          git add .
           git commit -m "Update time to $TIME"
           git push origin main
         env:
