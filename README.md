@@ -1,4 +1,9 @@
 <div align="center">
+  <h1>
+    Sushil Regmi
+  </h1>
+</div>
+<div align="center">
   <a href="https://soocil.tech" target="_blank">
     <img src="./sushil.gif" alt="HeHe.." style="width:100%;height:auto;border-radius:10px;"/>
   </a>
@@ -6,8 +11,6 @@
 
 <div align="center">
   <!-- TIME -->
-<time datetime="2025-06-19T16:51:42.547Z">10:36:42 PM Thursday 19 June 2025</time>
-<time datetime="2025-06-19T16:17:56Z">2025-06-19T16:17:56.095Z</time>
 </div>
 
 ### 👨‍💻 About Me
@@ -22,7 +25,7 @@
 - **[Baas](https://github.com/sooocil/Baas)** – Hotel room booking platform for fast, easy reservations.
 
 ### 🌐 Connect with Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushil-regmi-441965209/) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushilre/) 
 [![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?logo=vercel&logoColor=white)](https://soocil.tech/)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/sooocil)
 
