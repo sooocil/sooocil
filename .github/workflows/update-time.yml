@@ -2,16 +2,17 @@ name: Update Time in README
 
 on:
   schedule:
-    - cron: '*/5 * * * *'      
-  workflow_dispatch:
+    - cron: '*/5 * * * *'       # Every 5 minutes
+  workflow_dispatch:            # Manual trigger support
 
 jobs:
   update-time:
     permissions:
-      contents: write           
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Get current time
         uses: josStorer/get-current-time@v2
@@ -32,7 +33,7 @@ jobs:
           git config --global user.email "action@github.com"
           git add README.md
           git commit -m "Update time to $TIME" || echo "No changes to commit"
-          git pull --rebase origin main   # sync to avoid fast-forward issues :contentReference[oaicite:2]{index=2}
+          git pull --rebase origin main
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
