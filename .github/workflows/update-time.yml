@@ -2,14 +2,15 @@ name: Update Time in README
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # every 5 minutes
-  workflow_dispatch:
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:       # Also allows manual trigger
 
 jobs:
   update-time:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,7 +19,7 @@ jobs:
         uses: josStorer/get-current-time@v2
         id: current-time
         with:
-          format: 'hh:mm:ss A dddd DD MMMM YYYY'
+          format: 'hh:mm:ss A dddd DD MMMM YYYY'   # e.g. 09:54:34 PM Thursday 19 June 2025
           timezone: 'Asia/Kathmandu'
 
       - name: Update README with current time
@@ -42,7 +43,7 @@ jobs:
           git checkout main
           git rebase origin/main
           git stash pop
-          git add .
+          git add README.md
           git commit -m "Update time to $TIME"
           git push origin main
         env:
