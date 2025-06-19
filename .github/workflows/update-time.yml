@@ -2,7 +2,7 @@ name: Update Time in README
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'   # every 5 minutes
   workflow_dispatch:
 
 jobs:
@@ -38,8 +38,10 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git fetch origin main
+          git stash push -m "temp changes"
           git checkout main
           git rebase origin/main
+          git stash pop
           git add README.md
           git commit -m "Update time to $TIME"
           git push origin main
