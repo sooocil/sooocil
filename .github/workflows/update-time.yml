@@ -1,8 +1,8 @@
 name: Update Time in README
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs every 5 minutes (fixed syntax)
-  workflow_dispatch:       # Also allows manual trigger
+    - cron: '*/5 * * * *'  
+  workflow_dispatch:      
 
 jobs:
   update-time:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history
+          fetch-depth: 0 
           
       - name: Configure Git
         run: |
@@ -28,7 +28,7 @@ jobs:
         uses: josStorer/get-current-time@v2
         id: current-time
         with:
-          format: 'hh:mm:ss A dddd DD MMMM YYYY'   # e.g. 09:54:34 PM Thursday 19 June 2025
+          format: 'hh:mm:ss A dddd DD MMMM YYYY'   
           timezone: 'Asia/Kathmandu'
           
       - name: Update README with current time
@@ -38,7 +38,9 @@ jobs:
           
           # Create a backup and update the file
           cp README.md README.md.bak
-          sed -i "s|<!-- TIME -->.*|<!-- TIME -->\n<time datetime=\"$DATETIME\">$TIME</time>|" README.md
+          
+          # Replace the TIME comment with the comment plus the time
+          sed -i "/<!-- TIME -->/c\\  <!-- TIME -->\n  <h2>🕐 Current Time (Nepal)</h2>\n  <p align=\"center\">\n    <time datetime=\"$DATETIME\">$TIME</time>\n  </p>" README.md
           
       - name: Check for changes and commit
         run: |
